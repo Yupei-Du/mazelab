@@ -55,7 +55,7 @@ def get_actions(impassable_array, motions, predecessors, start_idx, goal_idx):
 
 def dijkstra_solver(impassable_array, motions, start_idx, goal_idx):
     impassable_array = np.asarray(impassable_array)
-    assert impassable_array.dtype == np.bool
+    assert impassable_array.dtype == bool
     assert isinstance(motions, (VonNeumannMotion, MooreMotion))
     
     graph = make_graph(impassable_array, motions)
